@@ -1,3 +1,5 @@
+![preview](assets/0-preview.png)
+
 ## Nigtclub
 
 Мобилно приложение/шаблон (template) за промотиране на нощен клуб.
@@ -20,3 +22,15 @@
 
 Скайп канал за комуникация на екипа:
 `https://join.skype.com/mZtqFhf7g2gr`
+
+![launch screen](assets/1-launch.png)
+
+![home_screen](assets/2-home.png)
+
+![navigation_menu](assets/3-navigation-menu.png)
+
+![events](assets/4-events.png)
+
+![gallery](assets/5-gallery.png)
+
+![musc](assets/6-club-music-soundcloud.png)
