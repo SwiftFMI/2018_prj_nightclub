@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var aboutButton: UIButton!
     @IBOutlet weak var eventsButton: UIButton!
     @IBOutlet weak var galleryButton: UIButton!
-    @IBOutlet weak var musicButton: UIButton!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var twitterButton: UIButton!
     @IBOutlet weak var instagramButton: UIButton!
@@ -32,14 +31,13 @@ class ViewController: UIViewController {
         eventsButton.titleEdgeInsets.left = 20
         galleryButton.setImage(UIImage(named: "ic_gallery"), for: .normal)
         galleryButton.titleEdgeInsets.left = 20
-        musicButton.setImage(UIImage(named: "ic_music"), for: .normal)
-        musicButton.titleEdgeInsets.left = 20
 
         facebookButton.setImage(UIImage(named: "ic_fb"), for: .normal)
         twitterButton.setImage(UIImage(named: "ic_twitter"), for: .normal)
         instagramButton.setImage(UIImage(named:"ic_instagram"), for: .normal)
         
     }
+
     @IBAction func onFacebookButtonTapped(_ sender: Any) {
         let pageId =  "2028954934033406"
         let appURL = URL(string: "fb://profile/\(pageId)")!

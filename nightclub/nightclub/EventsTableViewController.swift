@@ -32,25 +32,8 @@ class EventsTableViewController: UITableViewController {
         
         self.setTableViewBackgroundGradient(sender: self, #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1), #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1))
         
-        if let path = Bundle.main.path(forResource: "nightclub", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let dictionary = jsonResult as? [String: Any] {
-                    if let dictNightClub = dictionary["nightclub"] as? [String: Any] {
-                        if let dictEvents = dictNightClub["events"] as? [String: Any] {
-                            for event in (dictEvents["event"] as? Array<AnyObject>)! {
-                                self.events.append(Event(image: event["image"] as! String, title: event["title"] as! String, subtitle: event["subtitle"] as! String, date: event["date"] as! String))
-                            }
-                        }
-                    }
-                }
-            } catch {
-                print(error)
-            }
-        }
+        loadData()
     }
-    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
@@ -74,7 +57,19 @@ class EventsTableViewController: UITableViewController {
         return cell
     }
     
-    func setTableViewBackgroundGradient(sender: UITableViewController, _ topColor: UIColor, _ bottomColor: UIColor) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)!
+        
+        cell.contentView.backgroundColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)!
+        
+        cell.backgroundColor = UIColor.clear
+    }
+    
+    private func setTableViewBackgroundGradient(sender: UITableViewController, _ topColor: UIColor, _ bottomColor: UIColor) {
         
         let gradientBackgroundColors = [topColor.cgColor, bottomColor.cgColor]
         let gradientLocations = [0.0, 1.0]
@@ -87,5 +82,25 @@ class EventsTableViewController: UITableViewController {
         let backgroundView = UIView(frame: sender.tableView.bounds)
         backgroundView.layer.insertSublayer(gradientLayer, at: 0)
         sender.tableView.backgroundView = backgroundView
+    }
+    
+    private func loadData() {
+        if let path = Bundle.main.path(forResource: "nightclub", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let dictionary = jsonResult as? [String: Any] {
+                    if let dictNightClub = dictionary["nightclub"] as? [String: Any] {
+                        if let dictEvents = dictNightClub["events"] as? [String: Any] {
+                            for event in (dictEvents["event"] as? Array<AnyObject>)! {
+                                self.events.append(Event(image: event["image"] as! String, title: event["title"] as! String, subtitle: event["subtitle"] as! String, date: event["date"] as! String))
+                            }
+                        }
+                    }
+                }
+            } catch {
+                print(error)
+            }
+        }
     }
 }

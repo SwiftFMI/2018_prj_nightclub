@@ -11,7 +11,6 @@
 		5670075E2219C09000F8EC58 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670075D2219C09000F8EC58 /* EventsTableViewController.swift */; };
 		567007602219C1D100F8EC58 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670075F2219C1D100F8EC58 /* NavigationViewController.swift */; };
 		567007622219DBBF00F8EC58 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567007612219DBBF00F8EC58 /* UIViewExtensions.swift */; };
-		567007642219DDBE00F8EC58 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567007632219DDBE00F8EC58 /* MusicViewController.swift */; };
 		567007662219DE5A00F8EC58 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567007652219DE5A00F8EC58 /* AboutViewController.swift */; };
 		567007682219DEAF00F8EC58 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567007672219DEAF00F8EC58 /* GalleryViewController.swift */; };
 		568113E12214AA5E00203AF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568113E02214AA5E00203AF7 /* AppDelegate.swift */; };
@@ -27,7 +26,6 @@
 		5670075D2219C09000F8EC58 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		5670075F2219C1D100F8EC58 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		567007612219DBBF00F8EC58 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		567007632219DDBE00F8EC58 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		567007652219DE5A00F8EC58 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		567007672219DEAF00F8EC58 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		568113DD2214AA5E00203AF7 /* nightclub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nightclub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +78,6 @@
 				5670075D2219C09000F8EC58 /* EventsTableViewController.swift */,
 				5670075F2219C1D100F8EC58 /* NavigationViewController.swift */,
 				567007612219DBBF00F8EC58 /* UIViewExtensions.swift */,
-				567007632219DDBE00F8EC58 /* MusicViewController.swift */,
 				567007652219DE5A00F8EC58 /* AboutViewController.swift */,
 				567007672219DEAF00F8EC58 /* GalleryViewController.swift */,
 				56431095221AEECA00A4B809 /* nightclub.json */,
@@ -161,7 +158,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				567007642219DDBE00F8EC58 /* MusicViewController.swift in Sources */,
 				567007602219C1D100F8EC58 /* NavigationViewController.swift in Sources */,
 				567007622219DBBF00F8EC58 /* UIViewExtensions.swift in Sources */,
 				567007662219DE5A00F8EC58 /* AboutViewController.swift in Sources */,
