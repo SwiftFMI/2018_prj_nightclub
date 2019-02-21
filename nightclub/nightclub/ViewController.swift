@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
-        
+
         aboutButton.setImage(UIImage(named: "ic_about"), for: .normal)
         aboutButton.titleEdgeInsets.left = 20
         eventsButton.setImage(UIImage(named: "ic_events"), for: .normal)
@@ -34,10 +34,50 @@ class ViewController: UIViewController {
         galleryButton.titleEdgeInsets.left = 20
         musicButton.setImage(UIImage(named: "ic_music"), for: .normal)
         musicButton.titleEdgeInsets.left = 20
-        
+
         facebookButton.setImage(UIImage(named: "ic_fb"), for: .normal)
         twitterButton.setImage(UIImage(named: "ic_twitter"), for: .normal)
         instagramButton.setImage(UIImage(named:"ic_instagram"), for: .normal)
+        
     }
+    @IBAction func onFacebookButtonTapped(_ sender: Any) {
+        let pageId =  "2028954934033406"
+        let appURL = URL(string: "fb://profile/\(pageId)")!
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL)
+        } else {
+            let webURL = URL(string: "https://facebook.com/\(pageId)")!
+            application.open(webURL)
+        }
+    }
+
+    @IBAction func onTwitterButtonTapped(_ sender: Any) {
+        let Username =  "iamdevloper"
+        let appURL = URL(string: "twitter://user?screen_name=\(Username)")!
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL)
+        } else {
+            let webURL = URL(string: "https://twitter.com/\(Username)")!
+            application.open(webURL)
+        }
+    }
+
+    @IBAction func onInstagramButtonTapped(_ sender: Any) {
+        let Username =  "evgeniy.fl.filipov"
+        let appURL = URL(string: "instagram://user?username=\(Username)")!
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL)
+        } else {
+            let webURL = URL(string: "https://instagram.com/\(Username)")!
+            application.open(webURL)
+        }
+    }
+
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56431096221AEECA00A4B809 /* nightclub.json in Resources */ = {isa = PBXBuildFile; fileRef = 56431095221AEECA00A4B809 /* nightclub.json */; };
 		5670075E2219C09000F8EC58 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670075D2219C09000F8EC58 /* EventsTableViewController.swift */; };
 		567007602219C1D100F8EC58 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670075F2219C1D100F8EC58 /* NavigationViewController.swift */; };
 		567007622219DBBF00F8EC58 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567007612219DBBF00F8EC58 /* UIViewExtensions.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56431095221AEECA00A4B809 /* nightclub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = nightclub.json; path = assets/nightclub.json; sourceTree = "<group>"; };
 		5670075D2219C09000F8EC58 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		5670075F2219C1D100F8EC58 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		567007612219DBBF00F8EC58 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				567007632219DDBE00F8EC58 /* MusicViewController.swift */,
 				567007652219DE5A00F8EC58 /* AboutViewController.swift */,
 				567007672219DEAF00F8EC58 /* GalleryViewController.swift */,
+				56431095221AEECA00A4B809 /* nightclub.json */,
 			);
 			path = nightclub;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				568113EB2214AA6100203AF7 /* LaunchScreen.storyboard in Resources */,
+				56431096221AEECA00A4B809 /* nightclub.json in Resources */,
 				568113E82214AA6100203AF7 /* Assets.xcassets in Resources */,
 				56E0DD8E2214ACF800349954 /* AppAssets.xcassets in Resources */,
 				568113E62214AA5E00203AF7 /* Main.storyboard in Resources */,
