@@ -1,0 +1,16 @@
+PODS:
+  - SwiftPhotoGallery (3.3.1)
+
+DEPENDENCIES:
+  - SwiftPhotoGallery
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftPhotoGallery
+
+SPEC CHECKSUMS:
+  SwiftPhotoGallery: 4b8eb285d41268bee6d49a37759cd07e5d1d3183
+
+PODFILE CHECKSUM: 6ef8fbe743825fdf6e4d084ac675b884b5a751a2
+
+COCOAPODS: 1.6.1

@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 struct Event {
-    var image: String
-    var title: String
-    var subtitle: String
-    var date: String
+    let image: String
+    let title: String
+    let subtitle: String
+    let date: String
 }
 
 class EventTableViewCell: UITableViewCell {

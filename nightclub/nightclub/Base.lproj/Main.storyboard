@@ -134,7 +134,7 @@
                                             <constraint firstAttribute="height" constant="6" id="ng2-Zy-T1N"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18x-nF-0ec">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18x-nF-0ec">
                                         <rect key="frame" x="16" y="98.333333333333314" width="343" height="197"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="197" id="S38-Fq-Nrn"/>
@@ -297,16 +297,39 @@
         <scene sceneID="09c-zL-BUv">
             <objects>
                 <viewController storyboardIdentifier="GalleryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Epl-f3-QHT" customClass="GalleryViewController" customModule="nightclub" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bWK-3A-eLx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5qJ-p7-0ES">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="B4W-hk-hAv"/>
-                    </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GalleryCell" rowHeight="204" id="XrA-Cb-mZ1" customClass="GalleryTableViewCell" customModule="nightclub" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="204"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XrA-Cb-mZ1" id="a4W-dZ-tKk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="203.66666666666666"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f8W-c7-mac">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="203.66666666666666"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="f8W-c7-mac" secondAttribute="bottom" id="8t6-u2-ni5"/>
+                                        <constraint firstAttribute="trailing" secondItem="f8W-c7-mac" secondAttribute="trailing" id="LK4-Uj-twO"/>
+                                        <constraint firstItem="f8W-c7-mac" firstAttribute="top" secondItem="a4W-dZ-tKk" secondAttribute="top" id="N7c-5o-eAu"/>
+                                        <constraint firstItem="f8W-c7-mac" firstAttribute="leading" secondItem="a4W-dZ-tKk" secondAttribute="leading" id="iI9-hl-9F5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="galleryCoverImageView" destination="f8W-c7-mac" id="dvM-A0-10o"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4X-c8-G39" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="114"/>
+            <point key="canvasLocation" x="1084" y="113.79310344827587"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="pQZ-YN-M5S">
@@ -317,7 +340,10 @@
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.2291519642" green="0.336542964" blue="0.58492106200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

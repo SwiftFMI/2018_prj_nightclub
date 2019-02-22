@@ -19,6 +19,7 @@
 		568113E82214AA6100203AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568113E72214AA6100203AF7 /* Assets.xcassets */; };
 		568113EB2214AA6100203AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568113E92214AA6100203AF7 /* LaunchScreen.storyboard */; };
 		56E0DD8E2214ACF800349954 /* AppAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E0DD8D2214ACF800349954 /* AppAssets.xcassets */; };
+		930C2EFE910AA1104FB5EAF2 /* Pods_nightclub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1B109CFD74C903DB469B32 /* Pods_nightclub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,9 @@
 		568113EA2214AA6100203AF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		568113EC2214AA6100203AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E0DD8D2214ACF800349954 /* AppAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = AppAssets.xcassets; path = assets/AppAssets.xcassets; sourceTree = "<group>"; };
+		D9F569E88A55D4B8F246B28A /* Pods-nightclub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nightclub.release.xcconfig"; path = "Target Support Files/Pods-nightclub/Pods-nightclub.release.xcconfig"; sourceTree = "<group>"; };
+		E9CBD8F6D0BCA4E43A6BAC1F /* Pods-nightclub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nightclub.debug.xcconfig"; path = "Target Support Files/Pods-nightclub/Pods-nightclub.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1B109CFD74C903DB469B32 /* Pods_nightclub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nightclub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930C2EFE910AA1104FB5EAF2 /* Pods_nightclub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				568113DF2214AA5E00203AF7 /* nightclub */,
 				568113DE2214AA5E00203AF7 /* Products */,
+				BCDF72D2EA8373DA139E1958 /* Pods */,
+				F932398102EB5AFBF6BFEAAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +92,24 @@
 			path = nightclub;
 			sourceTree = "<group>";
 		};
+		BCDF72D2EA8373DA139E1958 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9CBD8F6D0BCA4E43A6BAC1F /* Pods-nightclub.debug.xcconfig */,
+				D9F569E88A55D4B8F246B28A /* Pods-nightclub.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F932398102EB5AFBF6BFEAAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF1B109CFD74C903DB469B32 /* Pods_nightclub.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 568113EF2214AA6100203AF7 /* Build configuration list for PBXNativeTarget "nightclub" */;
 			buildPhases = (
+				7DAB99C819183A5EE9AB224E /* [CP] Check Pods Manifest.lock */,
 				568113D92214AA5E00203AF7 /* Sources */,
 				568113DA2214AA5E00203AF7 /* Frameworks */,
 				568113DB2214AA5E00203AF7 /* Resources */,
+				7B7AD85C439867E0001E4169 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +179,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B7AD85C439867E0001E4169 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nightclub/Pods-nightclub-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftPhotoGallery/SwiftPhotoGallery.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhotoGallery.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nightclub/Pods-nightclub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DAB99C819183A5EE9AB224E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nightclub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		568113D92214AA5E00203AF7 /* Sources */ = {
@@ -308,6 +382,7 @@
 		};
 		568113F02214AA6100203AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9CBD8F6D0BCA4E43A6BAC1F /* Pods-nightclub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -326,6 +401,7 @@
 		};
 		568113F12214AA6100203AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9F569E88A55D4B8F246B28A /* Pods-nightclub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

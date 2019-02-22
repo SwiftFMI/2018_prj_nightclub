@@ -28,9 +28,11 @@ class AboutViewController: UIViewController {
     }
     
     @IBAction func onReservationButtonTapped(_ sender: Any) {
+        callNumber()
     }
 
     @IBAction func onLocationButtonTapped(_ sender: Any) {
+        UIApplication.shared.open(NSURL(string:"http://maps.apple.com/?ll=42.6744009,23.3284123")! as URL)
     }
     
     private func loadData() {
@@ -44,11 +46,10 @@ class AboutViewController: UIViewController {
                 if let dictionary = jsonResult as? [String: Any] {
                     if let dictNightClub = dictionary["nightclub"] as? [String: Any] {
                         if let dictClubInfo = dictNightClub["clubinfo"] as? [String: Any] {
-                            print(dictClubInfo)
                             titleLabel.text = dictClubInfo["name"] as? String
                             subtitleLabel.text = dictClubInfo["slogan"] as? String
-                            descriptionLabel.numberOfLines = 0
                             descriptionLabel.text = dictClubInfo["description"] as? String
+                            descriptionLabel.numberOfLines = 0
                             descriptionLabel.sizeToFit()
                             
                             reservationButton.setTitle(dictClubInfo["phonenumber"] as? String, for: .normal)
@@ -63,6 +64,15 @@ class AboutViewController: UIViewController {
                 }
             } catch {
                 print(error)
+            }
+        }
+    }
+    
+    private func callNumber() {
+        if let phoneCallURL:NSURL = NSURL(string:"tel://*123*3#") {
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL as URL)) {
+                application.open(phoneCallURL as URL)
             }
         }
     }
